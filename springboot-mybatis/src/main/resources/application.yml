@@ -1,0 +1,32 @@
+server:
+  port: 9001
+#mybatis:
+#  mapper-locations: daclasspath:/mapper/*Mapper.xml
+#  type-aliases-package: com.hua.entity
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/fk?characterEncoding=UTF-8
+#    username: root
+#    password: root
+
+spring:
+  datasource:
+    fk:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/fk?characterEncoding=UTF-8
+      username: root
+      password: root
+    lk:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/lk?characterEncoding=UTF-8
+      username: root
+      password: root
+
+logging:
+  level:
+    root: info
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
