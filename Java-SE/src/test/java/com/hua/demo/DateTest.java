@@ -94,4 +94,18 @@ public class DateTest {
         System.out.println(10 & 0xFF);
         System.out.println((10 >> 1) & 0xFF);
     }
+
+    //8
+    @Test
+    public void test9(){
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+            String now = "2022-11-28_16:20:00";
+            Date parse = sdf.parse(now);
+
+            System.out.println(parse.getTime() > new Date().getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 }
