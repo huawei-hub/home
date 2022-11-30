@@ -1,5 +1,6 @@
 package com.hua.forDemo;
 
+import com.hua.entity.EntityTest;
 import org.junit.Test;
 
 import java.util.*;
@@ -65,5 +66,21 @@ public class MapDemo {
                 it.remove();
         }
         System.out.println(map.size());
+    }
+
+    //
+    @Test
+    public void test2(){
+        Map<String, String> map = null;
+        for (String s : map.keySet()) {
+            System.out.println("s = " + s);
+        }
+    }
+
+    //3
+    @Test
+    public void test3(){
+        EntityTest entityTest = new EntityTest();
+        System.out.println(entityTest.getAge());
     }
 }
