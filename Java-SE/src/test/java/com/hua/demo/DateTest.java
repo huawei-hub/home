@@ -108,4 +108,38 @@ public class DateTest {
             e.printStackTrace();
         }
     }
+
+    //10
+    @Test
+    public void test10(){
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+            String now = "20200131";
+            Date date = sdf.parse(now);
+            Calendar instance = Calendar.getInstance();
+            instance.setTime(date);
+            instance.add(Calendar.DAY_OF_YEAR, 5);
+            String str = sdf.format(instance.getTime()).substring(4);
+            System.out.println("str -> " + str);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test11() {
+        int[] arr = {3, 9, -1, 10, 20};
+        // 冒泡排序
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        // 输出排序后的数组
+        System.out.println(Arrays.toString(arr));
+    }
 }

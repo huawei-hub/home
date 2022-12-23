@@ -1,7 +1,6 @@
 package com.hua.nacos.config;
 
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
@@ -25,6 +24,9 @@ public class NacosConfigValue {
     }
 
     //第二种
+    //对于@Bean和@Value加载顺序的问题。
+    //1、在同一个文件下，先@Value后@Bean
+    //2、在读取不同类下的@Value，先加载@Bean后@Value
     @Value("${aa.bb.cc}")
     private String aa;
 
