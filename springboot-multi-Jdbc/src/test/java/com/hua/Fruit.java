@@ -55,4 +55,8 @@ class ClassName<T> {//主类，文件名ClassName.java
         o.show_3(p);
 
     }
+
+
+
+
 }

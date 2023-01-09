@@ -43,4 +43,11 @@ public class utilDemo {
         String name = ManagementFactory.getRuntimeMXBean().getName();
         System.out.println("name = " + name);
     }
+
+    //4
+    @Test
+    public void test4(){
+        double a = 12.14;
+        System.out.println((int) a);
+    }
 }
