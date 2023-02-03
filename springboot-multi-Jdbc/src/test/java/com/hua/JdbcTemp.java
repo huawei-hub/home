@@ -23,19 +23,20 @@ public class JdbcTemp {
             Statement statement = conn.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             ResultSetMetaData metaData = resultSet.getMetaData();
-//            PreparedStatement ps = conn.prepareStatement(sql);
-//            ParameterMetaData paramMetaData = ps.getParameterMetaData();
-            int columnCount = metaData.getColumnCount();
-            int columnType = metaData.getColumnType(3);
-            System.out.println("columnType = " + columnType);
+            PreparedStatement ps = conn.prepareStatement(sql);
 
-            int[] paramType = new int[columnCount+ 1];
-            for (int i = 1; i <= columnCount; i++) {
-                System.out.println(metaData.getColumnName(i) + " " +
-                        metaData.getColumnType(i) + " " +
-                        metaData.getColumnTypeName(i));
-                paramType[i] = 1;
-            }
+//            ParameterMetaData paramMetaData = ps.getParameterMetaData();
+//            int columnCount = metaData.getColumnCount();
+//            int columnType = metaData.getColumnType(3);
+//            System.out.println("columnType = " + columnType);
+//
+//            int[] paramType = new int[columnCount+ 1];
+//            for (int i = 1; i <= columnCount; i++) {
+//                System.out.println(metaData.getColumnName(i) + " " +
+//                        metaData.getColumnType(i) + " " +
+//                        metaData.getColumnTypeName(i));
+//                paramType[i] = 1;
+//            }
 
 
         } catch (Exception e) {

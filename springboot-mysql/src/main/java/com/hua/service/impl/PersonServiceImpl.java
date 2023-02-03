@@ -14,6 +14,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public int findCount() {
-        return personMapper.findCount();
+//        return personMapper.findCount();
+        return 0;
     }
 }

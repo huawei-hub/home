@@ -1,4 +1,4 @@
-package com.hua.arithmetic;
+package com.hua.随机数;
 
 import org.junit.Test;
 //随机数概率变平方

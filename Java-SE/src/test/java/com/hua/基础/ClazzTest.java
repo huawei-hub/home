@@ -1,4 +1,4 @@
-package com.hua.demo;
+package com.hua.基础;
 
 import com.hua.entity.Stu;
 import lombok.Data;
@@ -8,10 +8,12 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Map;
 
-public class TestDemo {
+//反射相关知识
+public class ClazzTest {
 
-    //测试
+    //获取对象的3种方法
     @Test
     public void getClassObject(){
         //第一种获取Class对象的方法
@@ -30,7 +32,7 @@ public class TestDemo {
             e.printStackTrace();
         }
     }
-    
+
     //获取Class对象的方法，字段，构造器，注解，父类，接口等
     //获取Class对象的方法，字段，构造器，注解，父类，接口等
     @Test
@@ -106,5 +108,14 @@ public class TestDemo {
         int i = str.indexOf('.');
         System.out.println("i = " + i);
         System.out.println(str.substring(0, (i + 3)));
+    }
+
+    //6
+    @Test
+    public void test6(){
+        Map<String, String> getenv = System.getenv();
+        for (String s : getenv.keySet()) {
+            System.out.println(s + " -> " + getenv.get(s));
+        }
     }
 }

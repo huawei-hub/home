@@ -1,4 +1,4 @@
-package com.hua.arithmetic;
+package com.hua.随机数;
 
 import com.hua.util.Algorithm;
 import org.junit.Test;
