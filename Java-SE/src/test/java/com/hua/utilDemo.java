@@ -8,6 +8,8 @@ import org.springframework.util.ReflectionUtils;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Method;
 import java.util.Properties;
+import java.util.Random;
+import java.util.UUID;
 
 public class utilDemo {
     //断言
@@ -47,7 +49,6 @@ public class utilDemo {
     //4
     @Test
     public void test4(){
-        double a = 12.14;
-        System.out.println((int) a);
+        System.out.println(UUID.randomUUID().toString().replace("-", ""));
     }
 }

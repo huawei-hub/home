@@ -27,6 +27,5 @@ public class TriKeyDemo {
 
         Set set = triKey.getSet();
         set.forEach(System.out::println);
-
     }
 }

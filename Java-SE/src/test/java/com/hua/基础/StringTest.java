@@ -34,4 +34,11 @@ public class StringTest {
         }
         System.out.println("不能判断集合是否为空");
     }
+    //分割字符串
+    @Test
+    public void split(){
+        String str = "center..table";
+        String[] split = str.split("\\.\\.");
+        System.out.println(split[1]);
+    }
 }

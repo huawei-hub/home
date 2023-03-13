@@ -20,4 +20,17 @@ public class ListTest {
         System.out.println(CollectionUtils.isEmpty(list));
         System.out.println(list.isEmpty());
     }
+
+    //测试转换数组
+    @Test
+    public void toArray(){
+        List<String> list = new ArrayList<>();
+        list.add("123");
+        list.add("234");
+        list.add("345");
+        String[] arr = new String[]{};
+        String[] arrStr = list.toArray(new String[]{});
+        System.out.println(arrStr[2]);
+    }
+
 }
