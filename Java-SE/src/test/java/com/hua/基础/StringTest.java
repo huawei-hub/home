@@ -1,5 +1,7 @@
 package com.hua.基础;
 
+import cn.hutool.json.JSONObject;
+import com.hua.entity.Stu;
 import org.junit.Test;
 import org.springframework.util.StringUtils;
 
@@ -40,5 +42,21 @@ public class StringTest {
         String str = "center..table";
         String[] split = str.split("\\.\\.");
         System.out.println(split[1]);
+    }
+    //获取字符串的hash值
+    @Test
+    public void getHash(){
+        String str = "abc";
+        int i = str.hashCode();
+//        System.out.println("i = " + i);
+        Stu stu1 = new Stu("zhangsan", 24);
+        Stu stu2 = new Stu("lisi", 24);
+
+
+        String str1 = new JSONObject(stu1).toString();
+        String str2 = new JSONObject(stu2).toString();
+
+        System.out.println(str1.hashCode());
+        System.out.println(str2.hashCode());
     }
 }
