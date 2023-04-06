@@ -37,10 +37,10 @@ public class DateTypeTime {
         Date date = new Date();
         Calendar instance = Calendar.getInstance();
         instance.setTime(date);
-        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(instance.getTime());
+        String format = new SimpleDateFormat("HH:mm").format(instance.getTime());
         System.out.println("format = " + format);
-        instance.add(Calendar.MINUTE, -1);
-        format = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(instance.getTime());
+        instance.add(Calendar.HOUR, -14);
+        format = new SimpleDateFormat("HH:mm").format(instance.getTime());
         System.out.println("format = " + format);
     }
 

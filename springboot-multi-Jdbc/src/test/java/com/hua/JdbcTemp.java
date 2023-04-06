@@ -45,4 +45,32 @@ public class JdbcTemp {
 
     }
 
+    //测试Jdbc
+    @Test
+    public void testJdbc() {
+        try {
+            String driver = "com.mysql.cj.jdbc.Driver";
+            String url = "jdbc:mysql://39.106.139.198:3306/yunkeyo?characterEncoding=UTF-8";
+            String username = "root";
+            String password = "yunkeyo123456!";
+            //加载mysql驱动
+            Class.forName(driver);
+            //获取数据库连接
+            Connection conn = DriverManager.getConnection(url,username,password);
+            String sql = "select depart_name from admin_dept_info";
+
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String departName = rs.getString("depart_name");
+                System.out.println("departName = " + departName);
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
