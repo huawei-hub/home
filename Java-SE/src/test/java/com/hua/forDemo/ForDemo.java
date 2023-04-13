@@ -70,4 +70,12 @@ public class ForDemo {
             e.printStackTrace();
         }
     }
+
+    //
+    @Test
+    public void test5(){
+        if (false) {
+            System.out.println("111");
+        }
+    }
 }

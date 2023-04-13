@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 //单元测试
 @RunWith(value = SpringRunner.class)
-@SpringBootTest(classes = {com.hua.Application.class}, properties = {"application.yml"})
+@SpringBootTest(classes = {com.hua.SEApplication.class}, properties = {"application.yml"})
 public class ControllerTest {
     @Autowired
     private HelloController helloController;
