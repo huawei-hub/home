@@ -59,4 +59,12 @@ public class StringTest {
         System.out.println(str1.hashCode());
         System.out.println(str2.hashCode());
     }
+
+    //分割符
+    @Test
+    public void testSplit(){
+        String sql = "select 1";
+        String[] split = sql.split(";");
+        System.out.println("split = " + split);
+    }
 }
