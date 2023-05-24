@@ -2,6 +2,8 @@ package com.hua.forDemo;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -77,5 +79,19 @@ public class ForDemo {
         if (false) {
             System.out.println("111");
         }
+    }
+
+    //1
+    @Test
+    public void test6(){
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add("hello word!");
+            if (i == 5) {
+                list.clear();
+                list.add("restart ！");
+            }
+        }
+        list.forEach(System.out::println);
     }
 }

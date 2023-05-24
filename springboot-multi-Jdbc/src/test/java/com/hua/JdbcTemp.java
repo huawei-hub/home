@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class JdbcTemp {
     private String driver = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://127.0.0.1:3306/fk?characterEncoding=UTF-8";
+    private String url = "jdbc:mysql://127.0.0.1:3306/lk?characterEncoding=UTF-8";
     private String username = "root";
     private String password = "root";
 
@@ -18,12 +18,26 @@ public class JdbcTemp {
             Class.forName(driver);
             //获取数据库连接
             Connection conn = DriverManager.getConnection(url,username,password);
-            String sql = "select id,name,gender,phone from person";
+            String sql = "select id,name,salary,managerId from employee";
 
             Statement statement = conn.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
+
+            int columnCount = resultSet.getMetaData().getColumnCount();
+            //获取所有列名
             ResultSetMetaData metaData = resultSet.getMetaData();
-            PreparedStatement ps = conn.prepareStatement(sql);
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.println(metaData.getColumnName(i));
+            }
+            System.out.println("============");
+            System.out.println("columnCount = " + columnCount);
+            while (resultSet.next()) {
+                for (int i = 1; i <= columnCount; i++) {
+                    System.out.print(resultSet.getObject(i) + "\t\t");
+                }
+                System.out.println();
+            }
+
 
 //            ParameterMetaData paramMetaData = ps.getParameterMetaData();
 //            int columnCount = metaData.getColumnCount();

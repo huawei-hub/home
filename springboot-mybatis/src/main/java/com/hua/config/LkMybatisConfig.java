@@ -1,5 +1,6 @@
 package com.hua.config;
 
+import jdk.nashorn.internal.ir.annotations.Reference;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -11,6 +12,7 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
@@ -20,6 +22,8 @@ import java.util.Properties;
 @MapperScan(basePackages ="com.hua.mapper.lk",sqlSessionFactoryRef = "lkSqlSessionFactory")
 public class LkMybatisConfig {
 
+    //nacos动态刷新值，需要在@Value上再加一份
+//    @RefreshScope
     @Bean("lkDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.lk")
     public DataSource fkDataSource() {

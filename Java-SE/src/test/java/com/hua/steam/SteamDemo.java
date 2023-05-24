@@ -1,8 +1,12 @@
 package com.hua.steam;
 
+import com.hua.entity.Employee;
 import com.hua.entity.UserDTO;
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -32,7 +36,7 @@ public class SteamDemo {
 
     //1转换成其他集合/数组
     @Test
-    public void testSwapCollect(){
+    public void testSwapCollect() {
         List<UserDTO> userList = getUserList();
         //转换为set
         Set<UserDTO> set = userList.stream().collect(Collectors.toCollection(HashSet::new));
@@ -50,7 +54,7 @@ public class SteamDemo {
 
     //2
     @Test
-    public void testAggregate(){
+    public void testAggregate() {
         List<UserDTO> userList = getUserList();
         //找出年龄最大的
         Optional<UserDTO> max = userList.stream().max((s1, s2) -> s1.getAge() - s2.getAge());
@@ -60,4 +64,23 @@ public class SteamDemo {
             System.out.println(masUser.toString());
         }
     }
+
+    //测试读取文件使用流
+    @Test
+    public void testFileStream() throws IOException {
+        List<String> str = FileUtils.readLines(
+                new File("/Users/fuhuawei/IdeaProjects/home/" +
+                        "Java-SE/src/test/java/com/hua/steam/test.txt"), "UTF-8");
+        List<Employee> employeeList = str.stream().map(e -> {
+            List<String> words = Arrays.stream(e.split(",")).collect(Collectors.toList());
+            Employee employee = new Employee(words.get(0),
+                    Integer.parseInt(words.get(1)),
+                    words.get(2),
+                    words.get(3));
+            return employee;
+        }).collect(Collectors.toList());
+
+        employeeList.forEach(System.out::println);
+    }
+
 }

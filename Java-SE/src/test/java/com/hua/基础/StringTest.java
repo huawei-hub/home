@@ -23,7 +23,7 @@ public class StringTest {
     @Test
     public void substr(){
         String a = "abcdefg";
-        System.out.println(a.substring(2));
+        System.out.println(a.substring(0,a.length()-1));
         System.out.println(a.substring(2, 3));
     }
 
