@@ -1,7 +1,7 @@
 server:
   port: 9001
 
-#  type-aliases-package: com.hua.entity
+#  type-aliases-package: com.hua.se.entity
 
 spring:
   datasource:

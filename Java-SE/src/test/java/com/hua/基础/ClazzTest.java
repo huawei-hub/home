@@ -1,6 +1,6 @@
 package com.hua.基础;
 
-import com.hua.entity.Stu;
+import com.hua.jwt.entity.Stu;
 import lombok.Data;
 import org.junit.Test;
 
@@ -26,7 +26,7 @@ public class ClazzTest {
         //第三种获取Class对象的方法
         Class<?> cClass = null;
         try {
-            cClass = Class.forName("com.hua.entity.Stu");
+            cClass = Class.forName("com.hua.jwt.entity.Stu");
             System.out.println("方法三获取->zClass:" +cClass);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

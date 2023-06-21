@@ -1,6 +1,6 @@
 package com.hua.service;
 
-import com.hua.entity.User;
+import com.hua.jwt.entity.User;
 import com.hua.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.hua.mapper;
 
-import com.hua.entity.User;
+import com.hua.jwt.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

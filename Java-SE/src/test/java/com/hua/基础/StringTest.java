@@ -1,8 +1,9 @@
 package com.hua.基础;
 
 import cn.hutool.json.JSONObject;
-import com.hua.entity.Stu;
+import com.hua.jwt.entity.Stu;
 import org.junit.Test;
+import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
 import java.util.LinkedHashMap;
@@ -66,5 +67,39 @@ public class StringTest {
         String sql = "select 1";
         String[] split = sql.split(";");
         System.out.println("split = " + split);
+    }
+
+    //空置字符串
+    @Test
+    public void testLength(){
+        StringBuilder sf = new StringBuilder();
+        sf.append("hello");
+        sf.append("word");
+        System.out.println("第一次：" + sf.toString());
+        sf.setLength(0);
+        System.out.println("第二次：" + sf.toString());
+    }
+
+    //删除最后元素
+    @Test
+    public void testDelLast(){
+        StringBuilder sb = new StringBuilder("abc@@def@@");
+        StringBuilder result = sb.delete(sb.lastIndexOf("@@"), sb.lastIndexOf("@@") + "@@".length());
+        System.out.println("result = " + result);
+    }
+
+    //ObjectUtils判断字符串空
+    @Test
+    public void testObjectUtilsIsEmpty(){
+        System.out.println("null:" + ObjectUtils.isEmpty(null));
+        System.out.println("空串:" + ObjectUtils.isEmpty(new Object()));
+    }
+
+    //右移
+    @Test
+    public void testRight(){
+        int a = 2;
+        int b = a >> 3;
+        System.out.println("b = " + b);
     }
 }

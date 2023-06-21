@@ -1,6 +1,6 @@
 package com.hua.spring;
 
-import com.hua.controller.HelloController;
+import com.hua.jwt.controller.HelloController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

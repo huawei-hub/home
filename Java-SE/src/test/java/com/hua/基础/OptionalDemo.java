@@ -1,8 +1,8 @@
 package com.hua.基础;
 
-import com.hua.entity.Person;
-import com.hua.entity.Student;
-import com.hua.enums.Gender;
+import com.hua.jwt.entity.Person;
+import com.hua.jwt.entity.Student;
+import com.hua.jwt.enums.Gender;
 import org.junit.Test;
 
 import java.util.Optional;
