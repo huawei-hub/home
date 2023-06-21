@@ -1,7 +1,7 @@
 package com.hua.service;
 
 
-import com.hua.jwt.entity.User;
+import com.hua.entity.User;
 
 public interface UserService {
     User find(Long id);
