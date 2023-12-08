@@ -1,6 +1,6 @@
 package com.hua.数据结构;
 
-import com.hua.jwt.config.MerkleTree;
+import com.hua.se.config.MerkleTree;
 import org.junit.Test;
 
 import java.util.ArrayList;

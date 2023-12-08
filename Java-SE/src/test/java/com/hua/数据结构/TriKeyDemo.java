@@ -1,6 +1,6 @@
 package com.hua.数据结构;
 
-import com.hua.jwt.util.TriKey;
+import com.hua.se.util.TriKey;
 import org.junit.Test;
 
 import java.util.ArrayList;

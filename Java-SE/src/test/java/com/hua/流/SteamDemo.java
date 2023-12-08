@@ -1,7 +1,7 @@
 package com.hua.流;
 
-import com.hua.jwt.entity.Employee;
-import com.hua.jwt.entity.UserDTO;
+import com.hua.se.entity.Employee;
+import com.hua.se.entity.UserDTO;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 

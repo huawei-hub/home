@@ -1,6 +1,6 @@
 package com.hua.循环;
 
-import com.hua.jwt.entity.EntityTest;
+import com.hua.se.entity.EntityTest;
 import org.junit.Test;
 
 import java.util.*;
@@ -85,5 +85,30 @@ public class MapDemo {
         System.out.println(entityTest.getAge());
     }
 
+    public static <K, V> void removeCommonKeys(Map<K, V> map1, Map<K, V> map2) {
+        Set<K> commonKeys = new HashSet<>(map1.keySet());
+        commonKeys.retainAll(map2.keySet());
 
+        map1.keySet().removeAll(commonKeys);
+        map2.keySet().removeAll(commonKeys);
+    }
+
+    //删除两个map都存在的数据
+    @Test
+    public void testRemoveCommonKeys(){
+        Map<Integer, String> map1 = new HashMap<>();
+        map1.put(1, "Value1");
+        map1.put(2, "Value2");
+        map1.put(3, "Value3");
+
+        Map<Integer, String> map2 = new HashMap<>();
+        map2.put(2, "Value2");
+        map2.put(3, "Value3");
+        map2.put(4, "Value4");
+
+        removeCommonKeys(map1, map2);
+
+        System.out.println("Map1: " + map1);
+        System.out.println("Map2: " + map2);
+    }
 }

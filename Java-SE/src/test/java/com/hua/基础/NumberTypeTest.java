@@ -15,4 +15,10 @@ public class NumberTypeTest {
         nf.setMinimumFractionDigits(2);
         System.out.println(nf.format(a));
     }
+
+    //测试加加减减
+    @Test
+    public void test2(){
+        System.out.println((true||true));
+    }
 }

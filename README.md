@@ -15,7 +15,7 @@ behavior:行为类型
 打印日志日志级别、封装aop日志
 
 ## springboot-mybatis-plus
-项目集成mybatis_plus数据源
+自己封装简单的mybatis
 
 ## springboot-nacos
 项目集成nacos

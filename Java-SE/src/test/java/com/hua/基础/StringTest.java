@@ -1,7 +1,7 @@
 package com.hua.基础;
 
 import cn.hutool.json.JSONObject;
-import com.hua.jwt.entity.Stu;
+import com.hua.se.entity.Stu;
 import org.junit.Test;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;

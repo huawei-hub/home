@@ -1,6 +1,6 @@
 package com.hua.随机数;
 
-import com.hua.jwt.util.Algorithm;
+import com.hua.se.util.Algorithm;
 import org.junit.Test;
 
 public class SortDemo {
