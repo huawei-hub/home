@@ -30,5 +30,11 @@ behavior:行为类型
 多线程的一些东西
 创建过滤器 创建拦截器
 
+## [springboot-demo](springboot-demo%2Fspringboot-demo)
+springboot自带的发布、监听 [PublishServiceImpl.java](springboot-demo%2Fspringboot-demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fhua%2Fdemo%2Fservice%2FImpl%2FPublishServiceImpl.java) bian[ProductListener.java](springboot-demo%2Fspringboot-demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fhua%2Fdemo%2Flistener%2FProductListener.java)
 
-  
+校验参数  [TestDemo.java](springboot-demo%2Fspringboot-demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fhua%2Fdemo%2Fdto%2FTestDemo.java)
+
+配置文件配置的数据初始值  [AppConfigProperties.java](springboot-demo%2Fspringboot-demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fhua%2Fdemo%2Fdto%2FAppConfigProperties.java)
+
+编程型事务
