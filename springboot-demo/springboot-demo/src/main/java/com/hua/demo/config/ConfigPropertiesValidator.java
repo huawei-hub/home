@@ -6,6 +6,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+/**
+ * 该配置类用于校验配置类AppConfigProperties的成员变量的值的规则
+ */
 public class ConfigPropertiesValidator implements Validator {
     @Override
     public boolean supports(Class<?> aClass) {

@@ -3,7 +3,6 @@ package com.hua.demo.listener;
 import com.hua.demo.dto.Order;
 import com.hua.demo.dto.Person;
 import com.hua.demo.event.BaseEvent;
-import com.hua.demo.event.OrderEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
